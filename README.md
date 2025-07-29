@@ -21,16 +21,20 @@ Cuando usás `@Async`, Spring crea un **proxy del bean** para interceptar las ll
 
 ## 📂 Estructura del Proyecto
 ```bash
-src/
-└── main/
-    ├── java/com/aluracursos/asynctest/
-    │   ├── PruebaProxyApplication.java       # Clase principal con @SpringBootApplication y @EnableAsync
-    │   ├── servicio/                         
-    │   │   └── MiServicio.java               # Contiene el método @Async
-    │   └── principal/                        
-    │       └── MiCliente.java                # Llama al método async desde otro bean
-    └── resources/
-        └── application.properties            # Configuración (puerto, logging, etc.)
+AsyncTest/
+├── src/
+│ ├── main/
+│ │ ├── java/
+│ │ │ └── com/
+│ │ │ └── asynctest/
+│ │ │ ├── PruebaAsync.java # Cliente que llama al servicio @Async
+│ │ │ ├── PruebaProxyApplication.java # Clase principal con @SpringBootApplication y @EnableAsync
+│ │ │ └── RunAsyncService.java # Servicio con método @Async
+│ │ └── resources/
+│ └── test/
+├── build/
+├── .idea/
+└── .gradle/
 ```
 
 ## ⚙️ Cómo Ejecutarlo
