@@ -90,8 +90,8 @@ AsyncTest/
 
 1. Cloná este repositorio:
    ```bash
-   git clone https://github.com/tu-usuario/async-proxy-springboot.git
-   cd async-proxy-springboot
+   git clone https://github.com/biancaperrotta2/PatronesProxy.git
+   cd PatronesProxy
 ### 🧪 Cómo ejecutar el proyecto
 
 1. Abrí el proyecto en **IntelliJ IDEA**.
