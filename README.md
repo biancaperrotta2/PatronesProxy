@@ -31,7 +31,6 @@ El comportamiento se basa en el uso de proxies dinámicos de Spring, por lo cual
 
 ### `PruebaProxyApplication.java`
 
-- **Ubicación:** `com.aluracursos.asynctest`
 - **Rol:** Clase principal del proyecto. Contiene la anotación `@SpringBootApplication`, que habilita la configuración automática.
 - También activa `@EnableAsync` (para permitir el uso de métodos asincrónicos) y `@EnableScheduling` (opcional en este ejemplo).
 
@@ -39,7 +38,6 @@ El comportamiento se basa en el uso de proxies dinámicos de Spring, por lo cual
 
 ### `RunAsyncService.java`
 
-- **Ubicación:** `com.aluracursos.asynctest`
 - **Rol:** Servicio con un método marcado con `@Async`.
 - Este método simula una tarea lenta (por ejemplo, con un `Thread.sleep`) y se ejecuta en un hilo diferente.
 
@@ -47,7 +45,6 @@ El comportamiento se basa en el uso de proxies dinámicos de Spring, por lo cual
 
 ### `PruebaAsync.java`
 
-- **Ubicación:** `com.aluracursos.asynctest`
 - **Rol:** Cliente que llama al método `@Async` desde otro bean.
 - Es clave para que funcione el proxy de Spring, ya que **si llamás a un método asincrónico desde la misma clase, no se ejecutará de forma asincrónica**.
 - Este bean se inyecta y se ejecuta desde el `CommandLineRunner` de Spring o similar.
